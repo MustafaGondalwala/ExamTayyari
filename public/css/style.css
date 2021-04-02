@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+:root {
+  --violet: #5b4f90;
+  --teal: #69a8ad;
+  --green: #6d8671;
+  --light-red: #f17d80;
+  --gray-light: #eff2f6;
+  --blue-gray: #f0f1f3;
+  --top-navbar-height: 90px;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #eff2f6;
+}
+.mw-0 {
+  max-width: 0px;
+}
+.bg-violet {
+  background-color: var(--violet);
+}
+.bg-gray {
+  background-color: var(--gray-light);
+}
+.bg-blue-gray {
+  background-color: var(--blue-gray);
+}
+/* offcanvas and navbar */
+
+.offcanvas {
+  width: 270px;
+}
+
+/* navigation */
+.top-nav-icon {
+  border-radius: 400px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+  background-color: #eff2f6;
+}
+.top-nav-link-icon {
+  height: 36px;
+  width: 36px;
+  background-color: var(--gray-light);
+  display: inline-flex;
+  font-size: 1.4rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5000px;
+  color: var(--violet);
+}
+.sidebar-link,
+.top-nav-link {
+  color: var(--violet) !important;
+  display: inline-flex;
+  align-items: center;
+}
+.sidebar-link {
+  display: flex;
+}
+.sidebar-link.active,
+.sidebar-link:hover {
+  background-color: var(--gray-light);
+}
+.status-dot.online {
+  background-color: #0ca940;
+}
+.status-dot {
+  margin-right: 4px;
+  height: 10px;
+  display: inline-block;
+  width: 10px;
+  border-radius: 400px;
+}
+
+.sidebar-link .icon {
+  font-size: 1.5rem;
+  margin-right: 0.25rem;
+}
+.top-nav-profile-pic {
+  height: 36px;
+  width: 36px;
+  border-radius: 4000px;
+  object-fit: contain;
+  margin-right: 4px;
+}
+.brand-title {
+  font-weight: 700;
+  color: var(--violet);
+  font-size: 1.8rem;
+}
+.brand-subtitle {
+  font-size: 0.85rem;
+  color: var(--violet);
+}
+.sidebar-links {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-violet {
+  color: var(--violet);
+}
+main {
+  margin-top: 90px;
+}
+
+.border-violet {
+  border-color: var(--violet);
+}
+.border-top-thick {
+  border-width: 0;
+  border-top: 0.2rem solid transparent;
+}
+.border-top-thick {
+  border-top: 0.2rem solid var(--violet);
+}
+
+.btn-outline-violet {
+  border-color: var(--violet);
+  color: var(--violet);
+}
+.btn-outline-violet:hover {
+  border-color: var(--violet);
+  color: #ffffff;
+  background-color: var(--violet);
+}
+.page-item.active .page-link {
+  border-color: var(--violet);
+  background-color: var(--violet);
+}
+
+.candidate-info .candidate-image {
+  width: 56px;
+  height: 56px;
+  margin: auto;
+  object-fit: contain;
+}
+
+.candidate-info .candidate-name {
+  font-weight: 700;
+  text-align: center;
+}
+.dashboard-info-card {
+  position: relative;
+  color: #ffffff;
+  height: 100%;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-info-card .card-top {
+  padding: 1rem;
+}
+.dashboard-info-card .card-bottom {
+  margin-top: auto;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+.dashboard-info-card.violet {
+  background-color: var(--violet);
+}
+.dashboard-info-card.teal {
+  background-color: var(--teal);
+}
+.dashboard-info-card.red {
+  background-color: var(--light-red);
+}
+.dashboard-info-card.green {
+  background-color: var(--green);
+}
+.dashboard-info-card .info-card-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 52px;
+  width: 52px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+.dashboard-info-card .info-card-text .count {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  .mt-navbar-adjust {
+    height: calc(100% - var(--top-navbar-height));
+    margin-top: var(--top-navbar-height);
+  }
+  main {
+    margin-left: 270px;
+  }
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .offcanvas {
+    transform: none;
+    visibility: visible !important;
+    transition: none !important;
+  }
+  .offcanvas-header {
+    display: none;
+  }
+}
